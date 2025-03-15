@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casa Philippines - Menu</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Inline CSS for Price Bubbles, Hover Animation, and Carousel Image Sizing -->
+  <style>
+    /* Price Bubble styling */
+    .cookie-item {
+      position: relative;
+      display: inline-block;
+    }
+    .cookie-item img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+    .cookie-item:hover img {
+      transform: scale(1.15);
+    }
+    .price-bubble {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff6f6f;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.75rem;
+      padding: 4px 6px;
+      border-radius: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      white-space: nowrap;
+      text-align: center;
+      line-height: 1.2;
+    }
+    /* Limit carousel images so they don't overwhelm the layout */
+    .carousel-img {
+      max-height: 400px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Casa Philippines</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <!-- Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">More</a>
+            <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+              <li><a class="dropdown-item" href="#signature-cookies">Signature Cookies</a></li>
+              <li><a class="dropdown-item" href="about.html#team">Our Team</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Intro Section -->
+  <section class="hero-section">
+    <div class="container text-center">
+      <h1>Our Cookie Menu</h1>
+      <p>Delicious, freshly baked cookies with unique flavors and classic favorites.</p>
+      <a href="#carousel-section" class="btn btn-dark btn-lg">View Gallery</a>
+    </div>
+  </section>
+
+  <!-- Carousel Section (Cookie Gallery using Best Seller Images) -->
+  <section id="carousel-section" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Cookie Gallery</h2>
+      <div id="cookieCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Carousel Item 1: OH G! Cookie -->
+          <div class="carousel-item active">
+            <img src="images/oh-g-cookie.jpg" class="d-block w-100 carousel-img" alt="OH G! Cookie">
+          </div>
+          <!-- Carousel Item 2: Velvet Creamcheese -->
+          <div class="carousel-item">
+            <img src="images/velvet-creamcheese.jpg" class="d-block w-100 carousel-img" alt="Velvet Creamcheese">
+          </div>
+          <!-- Carousel Item 3: Biscoff Overload -->
+          <div class="carousel-item">
+            <img src="images/biscoff-overload.jpg" class="d-block w-100 carousel-img" alt="Biscoff Overload">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#cookieCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cookieCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLER Section with Price Bubbles and Hover Animation -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2 class="mb-4" style="font-weight:700; font-size:2rem;">BEST SELLER</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
+        <!-- Cookie 1 -->
+        <div class="col">
+          <div class="cookie-item">
+            <img src="images/oh-g-cookie.jpg" alt="OH G! Cookie" class="img-fluid rounded best-seller-img">
+            <div class="price-bubble">P55/pc<br>P250/box</div>
+          </div>
+          <h5 class="mt-2">OH G! Cookie</h5>
+        </div>
+        <!-- Cookie 2 -->
+        <div class="col">
+          <div class="cookie-item">
+            <img src="images/velvet-creamcheese.jpg" alt="Velvet Creamcheese" class="img-fluid rounded best-seller-img">
+            <div class="price-bubble">P55/pc<br>P250/box</div>
+          </div>
+          <h5 class="mt-2">Velvet Creamcheese</h5>
+        </div>
+        <!-- Cookie 3 -->
+        <div class="col">
+          <div class="cookie-item">
+            <img src="images/biscoff-overload.jpg" alt="Biscoff Overload" class="img-fluid rounded best-seller-img">
+            <div class="price-bubble">P55/pc<br>P310/box</div>
+          </div>
+          <h5 class="mt-2">Biscoff Overload</h5>
+        </div>
+        <!-- Cookie 4 -->
+        <div class="col">
+          <div class="cookie-item">
+            <img src="images/smores-please.jpg" alt="s'MORES please!" class="img-fluid rounded best-seller-img">
+            <div class="price-bubble">P55/pc<br>P310/box</div>
+          </div>
+          <h5 class="mt-2">s'MORES please!</h5>
+        </div>
+        <!-- Cookie 5 -->
+        <div class="col">
+          <div class="cookie-item">
+            <img src="images/oreo-matcha.jpg" alt="Oreo Matcha" class="img-fluid rounded best-seller-img">
+            <div class="price-bubble">P55/pc<br>P310/box</div>
+          </div>
+          <h5 class="mt-2">Oreo Matcha</h5>
+        </div>
+        <!-- Cookie 6 -->
+        <div class="col">
+          <div class="cookie-item">
+            <img src="images/oh-g-walnut.jpg" alt="OH G! Walnut" class="img-fluid rounded best-seller-img">
+            <div class="price-bubble">P55/pc<br>P310/box</div>
+          </div>
+          <h5 class="mt-2">OH G! Walnut</h5>
+        </div>
+        <!-- Cookie 7 -->
+        <div class="col">
+          <div class="cookie-item">
+            <img src="images/hot-cocoa.jpg" alt="Hot Cocoa" class="img-fluid rounded best-seller-img">
+            <div class="price-bubble">P55/pc<br>P310/box</div>
+          </div>
+          <h5 class="mt-2">Hot Cocoa</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Cookies Section (Only 3) -->
+  <section id="signature-cookies" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Signature Cookies</h2>
+      <p class="mb-5 text-center">
+        Inspired by global flavors, our signature cookies are seasonal and always exciting. Grab them while they last!
+      </p>
+      <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+        <!-- Card 1: OH G! Cookie -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/oh-g-cookie.jpg" class="card-img-top" alt="OH G! Cookie">
+            <div class="card-body">
+              <h5 class="card-title">OH G! Cookie</h5>
+              <p class="card-text">A delightful cookie with a perfect balance of sweetness and crunch.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2: Biscoff Overload -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/biscoff-overload.jpg" class="card-img-top" alt="Biscoff Overload">
+            <div class="card-body">
+              <h5 class="card-title">Biscoff Overload</h5>
+              <p class="card-text">Decadent treat loaded with Biscoff spread and Oreo crumbs.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3: Oreo Matcha -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/oreo-matcha.jpg" class="card-img-top" alt="Oreo Matcha">
+            <div class="card-body">
+              <h5 class="card-title">Oreo Matcha</h5>
+              <p class="card-text">A unique blend of matcha green tea and Oreo cookies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Site Map -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="fw-bold">Developer: Ryan Maderas</p>
+      <p>
+        Sitemap:
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="menu.html">Menu</a> |
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
