@@ -30,7 +30,7 @@ Download or clone the repository and open `index.html` in a browser. Keep the fo
 
 
 - Static front end with responsive Bootstrap layouts, navigation, and a carousel.
-- The contact form uses `action="#"`; no message-delivery backend is included.
+- The contact form is a local validation demo. Preview Message checks required fields and email format, then confirms that nothing was sent or stored. No message-delivery backend is included.
 - Online ordering and payments are not implemented.
 - Cross-browser behavior and accessibility have not been verified as part of this documentation update.
 
@@ -56,3 +56,9 @@ Record the commit, browser/version, viewport, scenario, expected and observed re
 
 Developer: Ryan Maderas.
 
+
+## Contact demo regression tests
+
+With Node.js 22 or newer installed, run `npm ci --ignore-scripts` followed by `npm test`. Three jsdom tests check the demo disclosure, canceled submit events, required fields and email validity, valid preview feedback, retained input, and removal of stale feedback after edits.
+
+All three tests passed locally using Node 24. The tests execute the actual contact script against the page DOM without loading external resources. They do not verify native validation popups, CSS layout, keyboard behavior in a real browser, or screen-reader announcements.
