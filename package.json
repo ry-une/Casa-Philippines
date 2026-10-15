@@ -1,0 +1,13 @@
+{
+  "name": "casa-philippines-tests",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
